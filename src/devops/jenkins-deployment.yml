@@ -106,7 +106,7 @@ spec:
     spec:
       containers:
         - name: backend-pod
-          image: viktortasevski/room-revamp-be:latest
+          image: viktortasevski/room-revamp-be-insssiok:latest
           imagePullPolicy: Always
           command: ['php', 'artisan', 'serve', '--host', '0.0.0.0']
           ports:
@@ -170,7 +170,7 @@ spec:
     spec:
       containers:
         - name: client-pod
-          image: viktortasevski/room-revamp-fe:latest
+          image: viktortasevski/room-revamp-fe-insssiok:latest
           imagePullPolicy: Always
           envFrom:
             - configMapRef:

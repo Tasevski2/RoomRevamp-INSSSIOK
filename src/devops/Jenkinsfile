@@ -6,10 +6,10 @@ pipeline {
                 script {
                     dir("./src/backend") {
                         checkout scm
-                        def beApp = docker.build("viktortasevski/room-revamp-be")
+                        def beApp = docker.build("viktortasevski/room-revamp-be-insssiok")
                         docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-                        beApp.push("${env.BUILD_NUMBER}")
-                        beApp.push("latest")
+                            beApp.push("${env.BUILD_NUMBER}")
+                            beApp.push("latest")
                         }
                     }
                 }
@@ -21,10 +21,10 @@ pipeline {
                 script {
                     dir("./src/client") {
                         checkout scm
-                        def feApp = docker.build("viktortasevski/room-revamp-fe")
+                        def feApp = docker.build("viktortasevski/room-revamp-fe-insssiok")
                         docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-                        feApp.push("${env.BUILD_NUMBER}")
-                        feApp.push("latest")
+                            feApp.push("${env.BUILD_NUMBER}")
+                            feApp.push("latest")
                         }
                     }
                 }
