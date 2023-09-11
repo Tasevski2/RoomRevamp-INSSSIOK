@@ -38,7 +38,7 @@ pipeline {
                         export KUBECONFIG="$KUBECONFIG_FILE"
 
                         # Run kubectl commands as needed
-                        kubectl apply -f jenkins-deployment.yml
+                        kubectl apply -f src/devops/jenkins-deployment.yml
                     '''
                 }
                 }
