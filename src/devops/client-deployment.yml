@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: client-pod
-          image: viktortasevski/room-revamp-fe:latest
+          image: viktortasevski/room-revamp-fe-insssiok:latest
           imagePullPolicy: Always
           envFrom:
             - configMapRef:
